@@ -1,0 +1,85 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{xcolor}
+\usepackage{lipsum} % For placeholder text, can be removed
+\usepackage{setspace}
+\usepackage{titling}
+\usepackage{longtable}
+\usepackage{hyperref}  % or \usepackage{url}
+\usepackage{array}
+
+\renewcommand{\arraystretch}{1.3}
+
+% Define a lighter gray color
+\definecolor{lightgray}{gray}{0.3}
+
+% Styling for left-aligned subheadings
+\newcommand{\subheading}[1]{
+  \noindent{\color{lightgray} \textbf{#1} } \\
+}
+
+\begin{document}
+\onehalfspacing
+
+
+% Centered bold main content
+\begin{center}
+  \textbf{\LARGE Training Day 1 Report:}
+\end{center}
+\vspace{1.5cm}
+% Subheadings on the left in light gray
+\subheading{June 23, 2025}
+
+
+
+% Optional body text
+Prompt engineering is the process of carefully designing and structuring the input (called a "prompt") given to an AI model like ChatGPT to get the most accurate, useful, or creative output. Since large language models respond based on the way a question or instruction is written, prompt engineering involves experimenting with different ways of asking something to guide the AI toward better answers.
+
+For example, asking “Summarize this paragraph” and “Can you give me a short version of this?” might give slightly different results. A good prompt can make the AI’s response more relevant, detailed, or even more logical.
+
+In simple terms, prompt engineering is like learning to talk to AI in its own language to get the best results. It’s especially important in areas like content generation, code writing, automation, and customer support where precision matters. % Replace with your own content
+
+\vspace{0.8 cm}
+\subheading{Anatomy of a great prompt}
+A good prompt should be \textcolor{lightgray}{\textbf{clear}}, \textcolor{lightgray}{\textbf{specific}}, \textcolor{lightgray}{\textbf{contextual}}, and \textcolor{lightgray}{\textbf{goal-oriented}}.
+
+
+\begin{itemize}
+ \item \textcolor{lightgray}{\textbf{Instruction}} – What the AI should do
+  \item \textcolor{lightgray}{\textbf{Context}} – Background or relevant information
+  \item \textcolor{lightgray}{\textbf{Format}} – Desired structure of the output
+  \item \textcolor{lightgray}{\textbf{Constraints}} – Any limits like tone, style, or word count
+  \item \textcolor{lightgray}{\textbf{Role}} – The role the AI should take (e.g., teacher, coder)
+\end{itemize}
+
+This structure helps in getting accurate and relevant responses from AI models.
+
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}} % Left-aligned with word wrap
+
+\subheading{Examples of Good vs Bad Prompts}
+\begin{longtable}{|L{3cm}|L{6cm}|L{6cm}|}
+\hline
+\textbf{Type} & \textbf{Bad Prompt} & \textbf{Good Prompt} \\
+\hline
+Role based & Tell me something about computers & Act as a college professor in computer science engineering. Write an intermediate-level introduction of computers. \\
+\hline
+Role based and COT & Why? & You are a researcher analyzing AI trends. Why AI suddenly saw such a boom in past 3-4 years. Think step by step. \\
+\hline
+Role based and constraints & Act like a person & Act like a 2nd-year CSE student with intermediate-level English. Write an answer to this question from computer architecture and microprocessor in more than 200 words. Explain different mapping techniques. \\
+\hline
+Role based and constraint based & Write a story & You are a writer like Ruskin Bond. Write a vivid story in around 500 words about first day of a girl born in the USA visiting Punjab. Story should target readers of age 11–16 years and should be told from 1st person point of view. Make our main character a 12-year-old who is mature for her age and absorbs everything she sees. \\
+\hline
+Role based & Compare dogs and cats & Act as a vet and explain to a 3-year-old the difference between a dog and a cat in simple words, their looks, behaviour, and their ways of showing happiness, affection, and hurt in a friendly way. \\
+\hline
+Constraint based & Summarize it & Summarize this Deloitte Insights article from the link given at end using simple language in 10–15 points with clear headings and subheadings. At the end, give 3 conclusions from the article. \url{https://www.deloitte.com/us/en/insights/topics/technology-management/tech-trends.html#what%E2%80%99s-next-for-ai}\\
+\hline
+Instructional & Give me ideas & Analyze YouTube for top trending niches that won't require high investment, and give me 10 such ideas. \\
+\hline
+Role based & How to make a website? & You are a web development mentor. Give me a complete process to make and host a portfolio website as a beginner with knowledge of HTML, CSS, JS, React, with a pre-built template. \\
+\hline
+Role based & Fix this code & You are a code reviewer. Analyze this code for any syntax or logical errors. Also suggest improvements to make this code more efficient, and add comments. \\
+\hline
+Constraint based & Draw something & Draw lotus flowers and a sun in the middle of them in Madhubani style. Keep colours vibrant, ensure symmetry. \\
+\hline
+\end{longtable}
+\end{document}
